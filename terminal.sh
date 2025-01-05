@@ -73,3 +73,9 @@ python3 manage.py runserver
 
 #SERVER
 scp file.txt username@remote-server-ip:/path/to/destination
+
+#SHELL
+sudo cat /etc/shells
+chsh -s /bin/zsh
+chsh -s /usr/local/bin/fish
+which fish
