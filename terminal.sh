@@ -78,4 +78,5 @@ scp file.txt username@remote-server-ip:/path/to/destination
 sudo cat /etc/shells
 chsh -s /bin/zsh
 chsh -s /usr/local/bin/fish
+set -U fish_user_paths /Library/PostgreSQL/14/bin $fish_user_paths
 which fish
