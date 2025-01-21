@@ -10,8 +10,12 @@ etcdctl --user=root:1234 get --prefix ""
 # GIT
 git tag v0.0.4
 git tag v0.0.4 -m "your commit"
+git push origin v0.0.4
 git tag -d v0.0.4 #for delete from local
 git push origin --delete v0.0.4 #delete from remote
+git remote -v
+git rm --cached .env
+git branch -D branch_name
 
 
 #MINIKUBE
@@ -69,7 +73,7 @@ sudo docker load -i image.tar
 #PYTHON
 python3 -m venv venv
 python3 manage.py runserver
-
+source venv/bin/activate
 
 #SERVER
 scp file.txt username@remote-server-ip:/path/to/destination
@@ -80,9 +84,16 @@ chsh -s /bin/zsh
 chsh -s /usr/local/bin/fish
 set -U fish_user_paths /Library/PostgreSQL/14/bin $fish_user_paths
 which fish
-sudo chown -R ussa privateAdmin/
+sudo chown -R username username folderName/
+sudo visudo #Passwordless sudo for Deployment User
+    username    ALL=(ALL:ALL) ALL
 nano ~/.ssh/config 
             Host hostname
                 HostName 255.255.255.255
                 User root
+                Port 22
 ssh hostname
+
+
+#NPM
+npm uninstall package_name
