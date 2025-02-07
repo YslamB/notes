@@ -11,6 +11,7 @@ etcdctl --user=root:1234 get --prefix ""
 git tag v0.0.4
 git tag v0.0.4 -m "your commit"
 git push origin v0.0.4
+git init
 git tag -d v0.0.4 #for delete from local
 git push origin --delete v0.0.4 #delete from remote
 git remote -v
@@ -82,6 +83,7 @@ scp file.txt username@remote-server-ip:/path/to/destination
 sudo cat /etc/shells
 chsh -s /bin/zsh
 chsh -s /usr/local/bin/fish
+sudo -i -u postgres 
 set -U fish_user_paths /Library/PostgreSQL/14/bin $fish_user_paths
 which fish
 sudo chown -R username username folderName/
@@ -93,7 +95,25 @@ nano ~/.ssh/config
                 User root
                 Port 22
 ssh hostname
+         #add ssh public key to server
+cat ~/.ssh/id_ed25519.pub
+echo "your_ssh_public_key" >> ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+https_proxy=http://localhost:10808 npm i firebase-admin cors
+sudo -u postgres psql
 
 
 #NPM
 npm uninstall package_name
+
+#MAC
+find / -type d -name "*postgre*"
+
+
+#RUST
+cargo new project_name
+cargo build
+cargo run 
+cargo install create-tauri-app --locked
+cargo tauri build
