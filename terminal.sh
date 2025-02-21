@@ -17,6 +17,7 @@ git push origin --delete v0.0.4 #delete from remote
 git remote -v
 git rm --cached .env
 git branch -D branch_name
+git branch -a
 
 
 #MINIKUBE
@@ -80,6 +81,8 @@ source venv/bin/activate
 scp file.txt username@remote-server-ip:/path/to/destination
 
 #SHELL
+sudo journalctl -u myapp.service
+sudo journalctl -u myapp.service -f
 sudo cat /etc/shells
 chsh -s /bin/zsh
 chsh -s /usr/local/bin/fish
@@ -87,6 +90,7 @@ sudo -i -u postgres
 set -U fish_user_paths /Library/PostgreSQL/14/bin $fish_user_paths
 which fish
 sudo chown -R username username folderName/
+ssh -i /to/pem/file/fileserver.pem user@ipaddress
 sudo visudo #Passwordless sudo for Deployment User
     username    ALL=(ALL:ALL) ALL
 nano ~/.ssh/config 
