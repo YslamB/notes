@@ -18,6 +18,7 @@ git remote -v
 git remote remove origin
 git rm --cached .env
 git branch -D branch_name
+git branch -a
 
 
 #MINIKUBE
@@ -84,6 +85,8 @@ scp file.txt username@remote-server-ip:/path/to/destination
 ssh-keygen -t ed25519 -C "your_email@example.com"
         # cat ~/.ssh/id_ed25519.pub
 ssh -T git@github.com
+sudo journalctl -u myapp.service
+sudo journalctl -u myapp.service -f
 sudo cat /etc/shells
 chsh -s /bin/zsh
 chsh -s /usr/local/bin/fish
@@ -92,6 +95,7 @@ set -U fish_user_paths /Library/PostgreSQL/14/bin $fish_user_paths
 which fish
 sudo chown -R username username folderName/
 sudo systemctl status postgresql.service 
+ssh -i /to/pem/file/fileserver.pem user@ipaddress
 sudo visudo #Passwordless sudo for Deployment User
     username    ALL=(ALL:ALL) ALL
 nano ~/.ssh/config 
