@@ -18,6 +18,8 @@ git remote -v
 git rm --cached .env
 git branch -D branch_name
 git branch -a
+git pull origin shanazar/dev --no-ff #perform a merge
+git reset --hard HEAD
 
 
 #MINIKUBE
