@@ -106,6 +106,8 @@ sudo -u postgres psql
 
 #NPM
 npm uninstall package_name
+npm create tauri-app@latest
+npm run tauri dev
 
 #MAC
 find / -type d -name "*postgre*"
@@ -117,3 +119,4 @@ cargo build
 cargo run 
 cargo install create-tauri-app --locked
 cargo tauri build
+deno run -A npm:create-tauri-app
