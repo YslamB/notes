@@ -19,6 +19,7 @@ git remote remove origin
 git rm --cached .env
 git branch -D branch_name
 git branch -a
+git fetch -p
 
 
 #MINIKUBE
