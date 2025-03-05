@@ -113,7 +113,7 @@ chmod 600 ~/.ssh/authorized_keys
 https_proxy=http://localhost:10808 npm i firebase-admin cors
 sudo -u postgres psql
 sudo -u postgres make migrate 
-
+sudo killall -HUP mDNSResponder
 
 # UBUNTU
 free -h
