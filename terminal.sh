@@ -6,6 +6,10 @@ etcdctl auth enable
 etcdctl --user=root:1234 user list
 etcdctl --user=root:1234 get --prefix ""
 
+# ZROK
+brew install zrok
+zrok enable Lg6lh20vSlX4 # u can take the token from https://api.zrok.io/
+zrok share public http://localhost:3000
 
 # GIT
 git tag v0.0.4
