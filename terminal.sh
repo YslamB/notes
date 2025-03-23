@@ -117,7 +117,8 @@ sudo -u postgres make migrate
 
 
 # UBUNTU
-free -h
+free -h #memory usage
+df -Th #disk usage
 lscpu
 htop
 
@@ -125,6 +126,8 @@ htop
 sudo apt install npm
 sudo npm install -g pm2
 npm uninstall package_name
+npm create tauri-app@latest
+npm run tauri dev
 pm2 start npm --name "app name" -- start
 pm2 start "npm run serve" --name <app name here>
 
@@ -140,3 +143,4 @@ cargo build
 cargo run 
 cargo install create-tauri-app --locked
 cargo tauri build
+deno run -A npm:create-tauri-app
