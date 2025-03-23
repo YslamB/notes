@@ -6,6 +6,10 @@ etcdctl auth enable
 etcdctl --user=root:1234 user list
 etcdctl --user=root:1234 get --prefix ""
 
+# ZROK
+brew install zrok
+zrok enable Lg6lh20vSlX4 # u can take the token from https://api.zrok.io/
+zrok share public http://localhost:3000
 
 # GIT
 git tag v0.0.4
@@ -21,6 +25,11 @@ git branch -D branch_name
 git branch -a
 git pull origin shanazar/dev --no-ff #perform a merge
 git reset --hard HEAD
+git fetch -p
+
+#PUBLIC LOCAL SERVER
+zrok share public http://localhost:1404
+ngrok http 3000
 
 
 #MINIKUBE
@@ -114,7 +123,7 @@ chmod 600 ~/.ssh/authorized_keys
 https_proxy=http://localhost:10808 npm i firebase-admin cors
 sudo -u postgres psql
 sudo -u postgres make migrate 
-
+sudo killall -HUP mDNSResponder
 
 # UBUNTU
 free -h #memory usage
