@@ -146,3 +146,8 @@ cargo run
 cargo install create-tauri-app --locked
 cargo tauri build
 deno run -A npm:create-tauri-app
+
+
+
+# dhcp, dns, servers
+

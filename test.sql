@@ -2987,58 +2987,6 @@ with tr as (
 2024-07-01
 
 
-INSERT INTO books (title, author, publisher) VALUES ('The Catcher in the Rye', 'J.D. Salinger', 'Little, Brown and Company');
-INSERT INTO books (title, author, publisher) VALUES ('To Kill a Mockingbird', 'Harper Lee', 'J.B. Lippincott & Co.');
-INSERT INTO books (title, author, publisher) VALUES ('1984', 'George Orwell', 'Secker & Warburg');
-INSERT INTO books (title, author, publisher) VALUES ('Pride and Prejudice', 'Jane Austen', 'T. Egerton');
-INSERT INTO books (title, author, publisher) VALUES ('The Great Gatsby', 'F. Scott Fitzgerald', 'Charles Scribners Sons');
-INSERT INTO books (title, author, publisher) VALUES ('Moby-Dick', 'Herman Melville', 'Harper & Brothers');
-INSERT INTO books (title, author, publisher) VALUES ('War and Peace', 'Leo Tolstoy', 'The Russian Messenger');
-INSERT INTO books (title, author, publisher) VALUES ('The Odyssey', 'Homer', 'Unknown');
-INSERT INTO books (title, author, publisher) VALUES ('The Brothers Karamazov', 'Fyodor Dostoevsky', 'The Russian Messenger');
-INSERT INTO books (title, author, publisher) VALUES ('Brave New World', 'Aldous Huxley', 'Chatto & Windus');
-INSERT INTO books (title, author, publisher) VALUES ('Ulysses', 'James Joyce', 'Sylvia Beach');
-INSERT INTO books (title, author, publisher) VALUES ('The Divine Comedy', 'Dante Alighieri', 'Unknown');
-INSERT INTO books (title, author, publisher) VALUES ('Hamlet', 'William Shakespeare', 'Unknown');
-INSERT INTO books (title, author, publisher) VALUES ('One Hundred Years of Solitude', 'Gabriel Garcia Marquez', 'Harper & Row');
-INSERT INTO books (title, author, publisher) VALUES ('The Iliad', 'Homer', 'Unknown');
-INSERT INTO books (title, author, publisher) VALUES ('Crime and Punishment', 'Fyodor Dostoevsky', 'The Russian Messenger');
-INSERT INTO books (title, author, publisher) VALUES ('The Canterbury Tales', 'Geoffrey Chaucer', 'Unknown');
-INSERT INTO books (title, author, publisher) VALUES ('Don Quixote', 'Miguel de Cervantes', 'Francisco de Robles');
-INSERT INTO books (title, author, publisher) VALUES ('In Search of Lost Time', 'Marcel Proust', 'Grasset and Gallimard');
-INSERT INTO books (title, author, publisher) VALUES ('Wuthering Heights', 'Emily Brontë', 'Thomas Cautley Newby');
-INSERT INTO books (title, author, publisher) VALUES ('The Hobbit', 'J.R.R. Tolkien', 'George Allen & Unwin');
-INSERT INTO books (title, author, publisher) VALUES ('Madame Bovary', 'Gustave Flaubert', 'Revue de Paris');
-INSERT INTO books (title, author, publisher) VALUES ('The Count of Monte Cristo', 'Alexandre Dumas', 'Pierre-Jules Hetzel');
-INSERT INTO books (title, author, publisher) VALUES ('Anna Karenina', 'Leo Tolstoy', 'The Russian Messenger');
-INSERT INTO books (title, author, publisher) VALUES ('The Picture of Dorian Gray', 'Oscar Wilde', 'Lippincotts Monthly Magazine');
-INSERT INTO books (title, author, publisher) VALUES ('Les Misérables', 'Victor Hugo', 'A. Lacroix, Verboeckhoven & Cie.');
-INSERT INTO books (title, author, publisher) VALUES ('Jane Eyre', 'Charlotte Brontë', 'Smith, Elder & Co.');
-INSERT INTO books (title, author, publisher) VALUES ('The Adventures of Huckleberry Finn', 'Mark Twain', 'Chatto & Windus / Charles L. Webster And Company');
-INSERT INTO books (title, author, publisher) VALUES ('Fahrenheit 451', 'Ray Bradbury', 'Ballantine Books');
-INSERT INTO books (title, author, publisher) VALUES ('The Sound and the Fury', 'William Faulkner', 'Jonathan Cape and Harrison Smith');
-INSERT INTO books (title, author, publisher) VALUES ('The Grapes of Wrath', 'John Steinbeck', 'The Viking Press-James Lloyd');
-INSERT INTO books (title, author, publisher) VALUES ('Great Expectations', 'Charles Dickens', 'Chapman & Hall');
-INSERT INTO books (title, author, publisher) VALUES ('Lolita', 'Vladimir Nabokov', 'Olympia Press');
-INSERT INTO books (title, author, publisher) VALUES ('Heart of Darkness', 'Joseph Conrad', 'Blackwoods Magazine');
-INSERT INTO books (title, author, publisher) VALUES ('Catch-22', 'Joseph Heller', 'Simon & Schuster');
-INSERT INTO books (title, author, publisher) VALUES ('The Stranger', 'Albert Camus', 'Gallimard');
-INSERT INTO books (title, author, publisher) VALUES ('The Metamorphosis', 'Franz Kafka', 'Kurt Wolff Verlag');
-INSERT INTO books (title, author, publisher) VALUES ('The Old Man and the Sea', 'Ernest Hemingway', 'Charles Scribners Sons');
-INSERT INTO books (title, author, publisher) VALUES ('Beloved', 'Toni Morrison', 'Alfred A. Knopf');
-INSERT INTO books (title, author, publisher) VALUES ('The Trial', 'Franz Kafka', 'Verlag Die Schmiede');
-INSERT INTO books (title, author, publisher) VALUES ('Invisible Man', 'Ralph Ellison', 'Random House');
-INSERT INTO books (title, author, publisher) VALUES ('Gullivers Travels', 'Jonathan Swift', 'Benjamin Motte');
-INSERT INTO books (title, author, publisher) VALUES ('Mansfield Park', 'Jane Austen', 'Thomas Egerton');
-INSERT INTO books (title, author, publisher) VALUES ('Slaughterhouse-Five', 'Kurt Vonnegut', 'Delacorte');
-INSERT INTO books (title, author, publisher) VALUES ('Frankenstein', 'Mary Shelley', 'Lackington, Hughes, Harding, Mavor & Jones');
-INSERT INTO books (title, author, publisher) VALUES ('The Scarlet Letter', 'Nathaniel Hawthorne', 'Ticknor, Reed & Fields');
-INSERT INTO books (title, author, publisher) VALUES ('Dracula', 'Bram Stoker', 'Archibald Constable and Company');
-INSERT INTO books (title, author, publisher) VALUES ('The Sun Also Rises', 'Ernest Hemingway', 'Charles Scribners Sons');
-INSERT INTO books (title, author, publisher) VALUES ('The Bell Jar', 'Sylvia Plath', 'Heinemann');
-INSERT INTO books (title, author, publisher) VALUES ('The Lord of the Rings', 'J.R.R. Tolkien', 'George Allen & Unwin');
-INSERT INTO books (title, author, publisher) VALUES ('Middlemarch', 'George Eliot', 'William Blackwood and Sons');
-
 
 with pnrs as (
     select * 
@@ -3152,3 +3100,6 @@ left join product_categories pcs on pcs.product_id = ps.id
 left join categories cs on cs.id = pcs.category_id
 where pps.status = true and cs.id = 2;
 
+SELECT column_name, data_type 
+FROM information_schema.columns 
+WHERE table_name = 'programs';
