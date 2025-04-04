@@ -23,7 +23,13 @@ git remote remove origin
 git rm --cached .env
 git branch -D branch_name
 git branch -a
+git pull origin shanazar/dev --no-ff #perform a merge
+git reset --hard HEAD
 git fetch -p
+
+#PUBLIC LOCAL SERVER
+zrok share public http://localhost:1404
+ngrok http 3000
 
 
 #MINIKUBE
@@ -120,7 +126,8 @@ sudo -u postgres make migrate
 sudo killall -HUP mDNSResponder
 
 # UBUNTU
-free -h
+free -h #memory usage
+df -Th #disk usage
 lscpu
 htop
 
