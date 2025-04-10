@@ -124,6 +124,8 @@ https_proxy=http://localhost:10808 npm i firebase-admin cors
 sudo -u postgres psql
 sudo -u postgres make migrate 
 sudo killall -HUP mDNSResponder
+sudo nano /etc/systemd/system/myapp.service
+
 
 # UBUNTU
 free -h #memory usage
