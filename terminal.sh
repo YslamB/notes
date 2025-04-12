@@ -156,6 +156,9 @@ cargo install create-tauri-app --locked
 cargo tauri build
 deno run -A npm:create-tauri-app
 
+# golang
+go run -tags mock main.go # build tags
+
 
 
 # dhcp, dns, servers
