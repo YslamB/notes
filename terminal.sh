@@ -132,6 +132,7 @@ free -h #memory usage
 df -Th #disk usage
 lscpu
 htop
+sudo apt install ~/Downloads/v2rayN-linux-64.deb
 
 #NPM
 sudo apt install npm
