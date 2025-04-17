@@ -133,6 +133,11 @@ df -Th #disk usage
 lscpu
 htop
 sudo apt install ~/Downloads/v2rayN-linux-64.deb
+sudo systemctl daemon-reexec
+sudo systemctl daemon-reload
+sudo systemctl enable apetsms.service
+sudo systemctl start apetsms.service
+
 
 #NPM
 sudo apt install npm
