@@ -137,6 +137,7 @@ sudo systemctl daemon-reexec
 sudo systemctl daemon-reload
 sudo systemctl enable apetsms.service
 sudo systemctl start apetsms.service
+~/Applications/cursor.AppImage --no-sandbox
 
 
 #NPM
