@@ -167,6 +167,11 @@ deno run -A npm:create-tauri-app
 go run -tags mock main.go # build tags
 
 
+# CERBOT
+sudo certbot --nginx -d han-doner.pikir.biz
+
+
+
 
 # dhcp, dns, servers
 
