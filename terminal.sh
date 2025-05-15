@@ -170,6 +170,9 @@ go run -tags mock main.go # build tags
 # CERBOT
 sudo certbot --nginx -d han-doner.pikir.biz
 
+# INSTALL APP ON MAC
+sudo xattr -d com.apple.quarantine Downloads/v2rayN-macos-arm64.dmg
+
 
 
 
