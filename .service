@@ -1,0 +1,36 @@
+[Unit]
+Description=menu.apet.biz Web Service
+After=network.target
+
+[Service]
+# Run the service as the 'pikir' user
+User=root
+
+# Set the working directory where the binary and .env file are located
+WorkingDirectory=/home/pikir/menu.apet.biz
+
+# Path to the executable binary
+ExecStart=/home/pikir/menu.apet.biz/menu.apet.biz
+
+# Load environment variables from .env file
+EnvironmentFile=/home/pikir/menu.apet.biz/.env
+
+# Automatically restart the service on failure
+Restart=on-failure
+RestartSec=5
+
+# Signals and timeout settings for graceful shutdown
+KillSignal=SIGINT
+TimeoutStopSec=10
+
+[Install]
+# Start this service automatically at boot
+WantedBy=multi-user.target
+
+# after careate this file 
+# 1. sudo systemctl daemon-reload
+# 2. sudo systemctl enable menu.apet.biz.service
+# 3. sudo systemctl start menu.apet.biz.service
+# 4. sudo systemctl status menu.apet.biz.service
+# for live logs
+# 5. sudo journalctl -u menu.apet.biz.service -f                      
