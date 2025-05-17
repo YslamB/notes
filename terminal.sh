@@ -169,6 +169,7 @@ go run -tags mock main.go # build tags
 
 # CERBOT
 sudo certbot --nginx -d han-doner.pikir.biz
+sudo openssl req -new -newkey rsa:2048 -nodes -keyout sms.apet.biz.key -out sms.apet.biz.csr
 
 # INSTALL APP ON MAC
 sudo xattr -d com.apple.quarantine Downloads/v2rayN-macos-arm64.dmg
