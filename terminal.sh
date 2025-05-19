@@ -82,6 +82,7 @@ docker push localhost:5000/my-image:local
 docker rmi my-image:local
 docker save -o image.tar <image-name>:<tag>
 sudo docker load -i image.tar
+docker exec -it <container_name_or_id> sh #bash 
 
 
 #PYTHON
