@@ -125,6 +125,9 @@ sudo -u postgres psql
 sudo -u postgres make migrate 
 sudo killall -HUP mDNSResponder
 sudo nano /etc/systemd/system/myapp.service
+export HTTP_PROXY=http://127.0.0.1:10808
+export HTTPS_PROXY=http://127.0.0.1:10808
+
 
 
 # UBUNTU
