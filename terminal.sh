@@ -86,6 +86,7 @@ docker exec -it <container_name_or_id> sh #bash
 
 
 #PYTHON
+pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --proxy http://127.0.0.1:10808 surprise
 python3 -m venv venv
 python3 manage.py runserver
 source venv/bin/activate
