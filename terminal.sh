@@ -162,6 +162,8 @@ pm2 start "npm run serve" --name <app name here>
 find / -type d -name "*postgre*"
 sudo nano /opt/homebrew/etc/nginx/nginx.conf
 sudo nginx -s stop #start, reload
+sudo /Applications/v2rayN.app/Contents/MacOS/v2rayN --install-helper # for tun mode
+sudo xattr -d com.apple.quarantine Downloads/v2rayN-macos-arm64.dmg # INSTALL APP ON MAC
 
 #RUST
 cargo new project_name
@@ -179,8 +181,8 @@ go run -tags mock main.go # build tags
 sudo certbot --nginx -d han-doner.pikir.biz
 sudo openssl req -new -newkey rsa:2048 -nodes -keyout sms.apet.biz.key -out sms.apet.biz.csr
 
-# INSTALL APP ON MAC
-sudo xattr -d com.apple.quarantine Downloads/v2rayN-macos-arm64.dmg
+
+
 
 
 
