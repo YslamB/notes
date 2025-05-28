@@ -96,6 +96,7 @@ source venv/bin/activate
 
 #SERVER
 scp file.txt username@remote-server-ip:/path/to/destination
+scp -P 22 user@0.0.0.0:/tmp/file.sql ~/Downloads/
 
 #SHELL
 ssh-keygen -t ed25519 -C "your_email@example.com"
