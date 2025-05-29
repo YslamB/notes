@@ -112,6 +112,7 @@ sudo -i -u postgres
 set -U fish_user_paths /Library/PostgreSQL/14/bin $fish_user_paths
 which fish
 sudo chown -R username username folderName/
+sudo chown -R your_username:www-data /var/www/
 sudo systemctl status postgresql.service 
 ssh -i /to/pem/file/fileserver.pem user@ipaddress
 sudo visudo #Passwordless sudo for Deployment User
