@@ -128,6 +128,8 @@ cat ~/.ssh/id_ed25519.pub
 echo "your_ssh_public_key" >> ~/.ssh/authorized_keys
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
+sudo chown -R youruser:youruser /var/www #for specific user
+sudo chmod -R 777 /var/www #for all users
 https_proxy=http://localhost:10808 npm i firebase-admin cors
 sudo -u postgres psql
 sudo -u postgres make migrate 
