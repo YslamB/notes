@@ -188,9 +188,5 @@ sudo openssl req -new -newkey rsa:2048 -nodes -keyout sms.apet.biz.key -out sms.
 
 
 
-
-
-
-
 # dhcp, dns, servers
 
