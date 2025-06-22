@@ -85,6 +85,7 @@ sudo docker load -i image.tar
 docker exec -it <container_name_or_id> sh #bash 
 docker run -d --name my-neo4j --memory=2g --cpus=2 -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=neo4j/securePass3ord neo4j
 docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=my-secret-pw -d -p 3306:3306 mysql:latest
+docker run -d --name my-redis -p 6379:6379 redis:latest --requirepass yourpassword
 docker stats my-neo4j #for monitoring container status
 docker cp ~/Downloads/dump.sql mysql-container:/tmp/your_dump.sql
 
