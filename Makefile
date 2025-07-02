@@ -10,6 +10,7 @@ deploy:
 	@echo "Deploying..."
 	@scp -P 2222 ./bin/menu.apet.biz pikir@95.85.126.132:/home/pikir/menu.apet.biz/
 	@scp -P 2222 ./.env pikir@95.85.126.132:/home/pikir/menu.apet.biz/
+	@scp -r ./images ubuntu@95.85.126.220:/var/www
 	@echo "Deploying done"
 
 	@echo "Starting remote service..."
