@@ -26,6 +26,12 @@ git branch -a
 git pull origin shanazar/dev --no-ff #perform a merge
 git reset --hard HEAD
 git fetch -p
+git remote set-url origin https://gitlab.test.com/tt-t/tt-t.git
+git remote add gitlab https://gitlab.test.com/tt-t/tt-t.git
+git remote -v
+git pull gitlab main --rebase
+git push gitlab main
+
 
 #PUBLIC LOCAL SERVER
 zrok share public http://localhost:1404
