@@ -2,6 +2,13 @@
 drop database newsdb;
 \c postgres;
 
+ALTER TABLE profiles ADD COLUMN city_id int;
+ALTER TABLE profiles
+ADD CONSTRAINT profiles_city_id_fk
+FOREIGN KEY (city_id)
+REFERENCES cities(id)
+	
+
 drop role news_user;
 SET client_encoding TO 'UTF-8';
 SHOW client_encoding;
